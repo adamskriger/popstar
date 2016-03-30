@@ -1,0 +1,11 @@
+
+<%= image_tag(@store.image(:medium), class: "img-responsive") %>
+<%= @store.caption%>
+
+  <%= simple_form_for @store do |f| %>
+ <%= f.input :image %>
+ <%= f.input :caption %>
+ <%= f.button :submit %>
+<% end %>
+
+<button><%= link_to "Delete", store_path(@store), method: :delete, data: {confirm: "Are you sure you  want to delete this store?"}%></button>
