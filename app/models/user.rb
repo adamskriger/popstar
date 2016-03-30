@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :stores, dependent: :destroy
   validates :company_name, presence: true
 
   # Include default devise modules. Others available are:

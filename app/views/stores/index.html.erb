@@ -4,4 +4,6 @@
     <% @stores.each do |store| %>
         <h2><%= link_to image_tag(store.image.url(:medium), class: "img-responsive"), store_path(store) %></h2><br>
         <h2> <%= store.caption %> </h2>
+        <h2> <%= store.user.company_name %> </h2>
+
       <% end %>

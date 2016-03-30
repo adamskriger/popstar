@@ -6,13 +6,21 @@ class StoresController < ApplicationController
   end
 
   def new
-    @store = Store.new
+    @store = current_user.stores.build
   end
 
   def create
-    @store = Store.create(store_params)
-    flash[:success] = "store has been set up"
-    redirect_to stores_path
+    @store = current_user.stores.build(store_params)
+
+    if @store.save
+      flash[:success] = "Your store has been created!"
+      redirect_to stores_path
+    else
+      flash[:alert] = "Your new store couldn't be created!
+Please check the form."
+      render :new
+    end
+
   end
 
   def show
