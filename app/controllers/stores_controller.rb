@@ -11,6 +11,7 @@ class StoresController < ApplicationController
 
   def create
     @store = Store.create(store_params)
+    flash[:success] = "store has been set up"
     redirect_to stores_path
   end
 
