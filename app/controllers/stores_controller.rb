@@ -14,11 +14,10 @@ class StoresController < ApplicationController
     @store = current_user.stores.build(store_params)
 
     if @store.save
-      flash[:success] = "Your store has been created!"
+
       redirect_to stores_path
     else
-      flash[:alert] = "Your new store couldn't be created!
-Please check the form."
+
       render :new
     end
 
