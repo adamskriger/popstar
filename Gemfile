@@ -1,11 +1,17 @@
 source 'https://rubygems.org'
 
 #Gems Added:
-  gem 'paperclip', '~> 4.2'
+  # gem 'paperclip', '~> 4.2'
   gem 'simple_form', '~> 3.1.0'
   gem 'haml', '~> 4.0.5'
   gem 'bootstrap-sass', '~> 3.3.5'
   gem 'devise'
+  gem 'aws-sdk'
+  #version specified for Paperclip because SDK does not work with latest version
+  # ttps://github.com/thoughtbot/paperclip/issues/2021
+  gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
+  gem 'pry-rails'
+  gem 'dotenv-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'

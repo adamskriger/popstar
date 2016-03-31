@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160330194644) do
+ActiveRecord::Schema.define(version: 20160331145710) do
+
+
+
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "store_id"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["store_id"], name: "index_comments_on_store_id"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+
+  create_table "photos", force: :cascade do |t|
+    t.text     "description"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "stores", force: :cascade do |t|
     t.string   "caption"

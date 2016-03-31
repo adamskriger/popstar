@@ -1,5 +1,6 @@
 class StoresController < ApplicationController
   before_action :authenticate_user!
+  before_action :owned_store, only: [:edit, :update, :destroy]
 
   def index
     @stores = Store.all
@@ -13,11 +14,10 @@ class StoresController < ApplicationController
     @store = current_user.stores.build(store_params)
 
     if @store.save
-      flash[:success] = "Your store has been created!"
+
       redirect_to stores_path
     else
-      flash[:alert] = "Your new store couldn't be created!
-Please check the form."
+
       render :new
     end
 
@@ -54,4 +54,10 @@ Please check the form."
     @store = Store.find(params[:id])
   end
 
+  def owned_store
+    unless current_user == @store.user
+      flash[:alert] = "This store doesn't belong to you!"
+      redirect_to root_path
+    end
+  end
 end
