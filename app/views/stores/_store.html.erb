@@ -1,0 +1,19 @@
+<div id="comment">
+
+  <div class="user-name">
+    <%= comment.user.company_name %>
+  </div>
+
+  <div class="comment-content">
+    <%= comment.content %>
+  </div>
+
+  <!-- If comment belongs to current user, user will have a X-shaped icon for deleting it -->
+  <% if comment.user == current_user %>
+    <!-- <remote: true> = let Rails know we want to delete our comment via AJAX -->
+    <%= link_to store_comment_path(store, comment), method: :delete, data: { confirm: "Are you sure?" }, remote: true do %>
+      <span class="glyphicon glyphicon-remove delete-comment"></span>
+    <% end %>
+  <% end %>
+
+</div>

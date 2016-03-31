@@ -1,6 +1,6 @@
 class AddAttachmentImageToStores < ActiveRecord::Migration
   def self.up
-    change_table :stores do |t|
+      change_table :stores do |t|
       t.attachment :image
     end
   end
