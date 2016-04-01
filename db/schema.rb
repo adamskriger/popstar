@@ -13,20 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160331145710) do
 
-
-
-
-  create_table "comments", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "store_id"
-    t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "comments", ["store_id"], name: "index_comments_on_store_id"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
-
   create_table "photos", force: :cascade do |t|
     t.text     "description"
     t.string   "attachment_file_name"
@@ -39,12 +25,24 @@ ActiveRecord::Schema.define(version: 20160331145710) do
 
   create_table "stores", force: :cascade do |t|
     t.string   "caption"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "image2_file_name"
+    t.string   "image2_content_type"
+    t.integer  "image2_file_size"
+    t.datetime "image2_updated_at"
+    t.string   "image3_file_name"
+    t.string   "image3_content_type"
+    t.integer  "image3_file_size"
+    t.datetime "image3_updated_at"
+    t.string   "image4_file_name"
+    t.string   "image4_content_type"
+    t.integer  "image4_file_size"
+    t.datetime "image4_updated_at"
     t.integer  "user_id"
   end
 
