@@ -12,11 +12,8 @@
 
 <% if @store.user.id == current_user.id %>
 
-  <%= simple_form_for @store do |f| %>
-  <%= f.input :image %>
-  <%= f.input :caption %>
-  <%= f.button :submit %>
-  <% end %>
+  <button><%= link_to 'Edit Your Store', edit_store_path(@store) %></button>
+
 
   <button><%= link_to "Delete", store_path(@store), method: :delete, data: {confirm: "Are you sure you  want to delete this store?"}%></button>
 

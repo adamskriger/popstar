@@ -1,9 +1,17 @@
 
+
   <%= image_tag(@store.image(:medium), class: "img-responsive") %>
+  <%= image_tag(@store.image2(:medium), class: "img-responsive") %>
+  <%= image_tag(@store.image3(:medium), class: "img-responsive") %>
+  <%= image_tag(@store.image4(:medium), class: "img-responsive") %>
+
   <%= @store.caption%>
 
     <%= simple_form_for @store do |f| %>
    <%= f.input :image %>
+   <%= f.input :image2 %>
+   <%= f.input :image3 %>
+   <%= f.input :image4 %>
    <%= f.input :caption %>
    <%= f.button :submit %>
   <% end %>
