@@ -56,8 +56,8 @@ class StoresController < ApplicationController
   end
 
   def owned_store
+    @store = Store.find(params[:id])
     unless current_user == @store.user
-      flash[:alert] = "This store doesn't belong to you!"
       redirect_to root_path
     end
   end
