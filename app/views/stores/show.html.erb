@@ -1,3 +1,5 @@
+<%= @store.caption%>
+<h2> <%= @store.user.company_name %> </h2>
 
 <%= image_tag(@store.image(:medium), class: "img-responsive") %>
 <%= image_tag(@store.image2(:medium), class: "img-responsive") %>
@@ -6,8 +8,6 @@
 
 
 
-<%= @store.caption%>
-<h2> <%= @store.user.company_name %> </h2>
 
 
 <% if @store.user.id == current_user.id %>
