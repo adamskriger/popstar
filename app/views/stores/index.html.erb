@@ -6,4 +6,35 @@
         <h2> <%= store.caption %> </h2>
         <h2> <%= store.user.company_name %> </h2>
 
+
+              <%= store.caption %>
+                <% if store.comments %>
+                  <% store.comments.each do |comment| %>
+                    <div class="comment">
+                      <div class="user-name">
+                        <%= comment.user.company_name %>
+                      </div>
+                      <div class="comment-content">
+                        <%= comment.content %>
+                      </div>
+                      <% if comment.user == current_user %>
+                        <%= link_to store_comment_path(store, comment), method: :delete, data: { confirm: "Are you sure?" } %>
+
+                      <% end %>
+                      <div class="comment-like-form row">
+  <div class="like-button col-sm-1">
+    <span>(class="glyphicon glyphicon-heart-empty")</span>
+  </div>
+    <% end %>
+    <div class="comment-form col-sm-11">
+      <%= form_for [store, store.comments.new] do |f| %>
+        <%= f.text_field :content, placeholder: 'Add'%>
+
+  </div>
+</div>
+                    </div>
+                  <% end %>
+
+                <% end %>
+
       <% end %>
