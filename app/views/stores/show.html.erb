@@ -17,4 +17,15 @@
 
   <button><%= link_to "Delete", store_path(@store), method: :delete, data: {confirm: "Are you sure you  want to delete this store?"}%></button>
 
+<!-- Display Add Comment -->
+
+  <div class="comment-form col-sm-11">
+    <%= form_for [@store, @store.comments.new] do |f| %>
+    <%= f.text_field :content, placeholder: 'Add'%>
+    <%= f.submit 'Add'%>
+  </div>
+  <% end %>
+
+  <!-- End Add Comment -->
+
   <% end %>

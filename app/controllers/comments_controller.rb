@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
   end
 
   def show
-    @store = Store.find params[:id]
+   @store = Store.find(params[:id])
    @comment = Comment.new(store: @store)
 
   end
