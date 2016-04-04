@@ -4,7 +4,9 @@ class Store < ActiveRecord::Base
 
   validates :user_id, :image,:image2, :image3, :image4,  presence: true
 
-
+  searchable do
+    text :caption
+    end
 
 
   has_attached_file :image, styles: { :medium => "640x" }

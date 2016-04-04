@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-  acts_as_messageable
 
   has_many :stores, dependent: :destroy
   validates :company_name, presence: true
