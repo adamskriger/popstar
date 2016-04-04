@@ -9,8 +9,8 @@ class Store < ActiveRecord::Base
     end
 
 
-  has_attached_file :image, styles: { :medium => "640x" }
-  validates_attachment_content_type :image, :content_type =>
+has_attached_file :image, styles: { :medium => "640x" }
+validates_attachment_content_type :image, :content_type =>
 /\Aimage\/.*\Z/
 
 has_attached_file :image2, styles: { :medium => "640x" }

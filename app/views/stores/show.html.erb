@@ -10,7 +10,7 @@
 
 
 
-<% if @store.user.id == current_user.id %>
+  <% if @store.user.id == current_user.id %>
 
   <button><%= link_to 'Edit Your Store', edit_store_path(@store) %></button>
 
@@ -30,19 +30,15 @@
         <% if @store.comments %>
           <% @store.comments.each do |comment| %>
         <!-- Display Actual Comment -->
-     <div class="comment-content">
-      <%= comment.content %>
-      <% if comment.user == current_user %>
-      <button><%= link_to "Delete This Comment",  store_comment_path(@store, comment), method: :delete, data: { confirm: "Are you sure?" } %></button>
-      <% end %>
+
+         <div class="comment-content">
+          <%= comment.content %>
+          <% if comment.user == current_user %>
+          <button><%= link_to "Delete This Comment",  store_comment_path(@store, comment), method: :delete, data: { confirm: "Are you sure?" } %></button>
+          <% end %>
+        </div>
+
     </div>
-    </div>
-    <% end %>
-    <!-- End Add Comment -->
-
-
-
     <% end %>
     <% end %>
-
-    <!-- End Display Actual Comment -->
+    <% end %>
