@@ -1,6 +1,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "bootstrap-responsive";
+// @import "bootstrap-responsive";
+
+
+
+.container  {
+     width: auto;
+}
+
+.index_div {
+  width: 30%;
+  height: 500px;
+  float: left;
+  margin: 8px;
+}
 
 .simple_form div.text_area {
      width: 100%;
@@ -12,6 +25,10 @@
      background-color: #f8f8f8;
      resize: none;
 }
+
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
