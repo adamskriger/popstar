@@ -13,14 +13,17 @@
     <li><%= link_to "popstar", root_path %></li>
   </ul>
   </div>
+  <form class="navbar-form navbar-left" role="search">
+
+  <div class="form-group">
 
   <%= form_tag stores_path, :method => :get do %>
-    <p>
       <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", :name => nil %>
-    </p>
+      <%= submit_tag "Find My Space", :class => "btn btn-default",  :name => nil %>
   <% end %>
 
+</div>
+</form>
     <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
 
