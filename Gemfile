@@ -15,6 +15,7 @@ source 'https://rubygems.org'
   gem 'sunspot'
   gem 'sunspot_rails'
   gem 'sunspot_solr'
+  
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title>popstar</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -8,11 +9,13 @@
 
 </head>
 <body>
+  <div class="main_container">
   <%= render 'layouts/navbar' %>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <%= yield %>
 
+</div>
 </body>
 </html>

@@ -3,12 +3,10 @@
 <%= f.input :image2 %>
 <%= f.input :image3 %>
 <%= f.input :image4 %>
-
-
 <%= f.input :zipcode %>
 <%= f.input :caption %>
-<%= f.input :long_description %>
-
+<h6>Please describe your property</h6>
+<%= f.text_area :long_description, :id => "message_area", :cols => 50, :rows => 10 %>
 
 <%= f.button :submit %>
 <% end %>
