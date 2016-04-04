@@ -1,10 +1,7 @@
 
 <% @stores.each do |store| %> <div class="index_div">
-  <div class="crop"><%= link_to image_tag(store.image.url(:medium),width: '100%', height: '100%', alt: 'Real Estate Image', class: "img-responsive"), store_path(store) %></div>
-  <br>
-  <h2> Company Name: <%= store.user.company_name %> </h2>
-  <h3> Headline: <%= store.caption %> </h3>
-  <p> Zipcode: <%= store.zipcode %> </p>
+  <div class="crop"><%= link_to image_tag(store.image.url(:medium),width: '100%', height: '100%', alt: 'Real Estate Image', class: "img-responsive"), store_path(store) %>  <h3 class="inside_text"> <span class="inside_span"> <%= store.caption %></span> </h3>
+</div>
 </div>
 
 
