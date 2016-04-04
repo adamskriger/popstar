@@ -19,25 +19,36 @@
 
   <% end %>
 
-  <!-- Display Add Comment -->
+  <% if @store.comments %>
+    <% @store.comments.each do |comment| %>
 
-    <div class="comment-form col-sm-11">
-      <%= form_for [@store, @store.comments.new] do |f| %>
-      <%= f.text_field :content, placeholder: 'Add'%>
-      <%= f.submit 'Add'%>
-    </div>
-    <% if @store.comments %>
-      <% @store.comments.each do |comment| %>
-    <!-- Display Actual Comment -->
-    <div class="comment-content">
-      <%= comment.content %>
-    </div>
-    <% end %>
-    <!-- End Add Comment -->
-
+    <!-- Comment Containter Start -->
+      <div class="comment">
+        <div class="user-name">
+            <%= comment.user.company_name %>
+        </div>
+        <div class="comment-content">
+          <%= comment.content %>
+        </div>
+            <% if comment.user == current_user %>
+            <button><%= link_to "Delete This Comment",  store_comment_path(@store, @comment), method: :delete, data: { confirm: "Are you sure?" } %></button>
+            <% end %>
 
 
-    <% end %>
+
     <% end %>
 
+              <!-- Add form & submit start -->
+              <div class="comment-form col-sm-11">
+                <%= form_for [@store, @store.comments.new] do |f| %>
+                <%= f.text_field :content, placeholder: 'Add'%>
+                <%= f.submit 'Add'%>
+              </div>
+              <!-- Add form & submit ends -->
+
+      </div>
+    <!-- Comment Containter Ends -->
+
+                  <% end %>
+  <% end %>
     <!-- End Display Actual Comment -->

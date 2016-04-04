@@ -29,7 +29,7 @@ class StoresController < ApplicationController
 
   def show
     @store = Store.find(params[:id])
-    @comment = Comment.new
+    @comment = Comment.find(params[:id])
   end
 
   def edit
