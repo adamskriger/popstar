@@ -26,14 +26,16 @@
       <%= f.text_field :content, placeholder: 'Add'%>
       <%= f.submit 'Add'%>
     </div>
-    <% if @store.comments %>
-      <% @store.comments.each do |comment| %>
-    <!-- Display Actual Comment -->
-    <div class="comment-content">
+    <div>
+        <% if @store.comments %>
+          <% @store.comments.each do |comment| %>
+        <!-- Display Actual Comment -->
+     <div class="comment-content">
       <%= comment.content %>
       <% if comment.user == current_user %>
       <button><%= link_to "Delete This Comment",  store_comment_path(@store, comment), method: :delete, data: { confirm: "Are you sure?" } %></button>
       <% end %>
+    </div>
     </div>
     <% end %>
     <!-- End Add Comment -->
