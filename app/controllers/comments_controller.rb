@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
       if @comment.save
 
         redirect_to :back
-        
+
     else
 
         render root_path

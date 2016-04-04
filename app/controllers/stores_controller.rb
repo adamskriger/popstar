@@ -29,6 +29,7 @@ class StoresController < ApplicationController
 
   def show
     @store = Store.find(params[:id])
+    @comment = Comment.new
   end
 
   def edit
