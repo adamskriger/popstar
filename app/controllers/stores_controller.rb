@@ -16,13 +16,10 @@ class StoresController < ApplicationController
   def create
     @store = current_user.stores.build(store_params)
     if @store.save
-
       redirect_to stores_path
     else
-
       render :new
     end
-
   end
 
   def show
@@ -50,7 +47,7 @@ class StoresController < ApplicationController
   private
 
   def store_params
-    params.require(:store).permit(:image, :image2, :image3, :image4, :caption)
+    params.require(:store).permit(:image, :image2, :image3, :image4, :caption, :zipcode, :long_description)
   end
 
   def set_store
