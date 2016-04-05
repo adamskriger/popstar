@@ -17,6 +17,10 @@ source 'https://rubygems.org'
   gem 'sunspot_solr'
   gem 'vider', github: 'wazery/vider'
   gem 'videojs_rails'
+  gem 'lightbox2-rails'
+  gem 'rubylight'
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'

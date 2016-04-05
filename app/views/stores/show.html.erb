@@ -7,7 +7,12 @@
 <%= image_tag(@store.image(:medium), class: "img-responsive") %>
 <%= image_tag(@store.image2(:medium), class: "img-responsive") %>
 <%= image_tag(@store.image3(:medium), class: "img-responsive") %>
-<%= image_tag(@store.image4(:medium), class: "img-responsive") %>
+<%= image_tag(@store.image4(:medium), class: "img-responsive", :rel => "lightbox") %>
+
+
+
+
+<%= link_to image_tag(@store.image(:medium)), image_path(@store.image(:medium)), data: { :lightbox => "news", :title => "MyCaption" } %>
 
 
 
