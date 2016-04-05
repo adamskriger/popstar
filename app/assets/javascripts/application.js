@@ -13,7 +13,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 //= require('jquery')
@@ -21,3 +20,46 @@
 //= require jquery.vide
 //= require video
 //= require lightbox
+//= require fancybox
+
+$(document).ready(function() {
+
+  var picArray = [$(".pic1"), $(".pic2"),$(".pic3"),$(".pic4")];
+  var i=0;
+
+
+
+
+  $(".pic1").click(function(){
+    $(".lightbox").show()
+    $(".picture-container").append($(".pic1").clone())
+    console.log("Click Happened!");
+  })
+
+  $(".forward").click(function(){
+    if(i<3) {
+    i++
+    $(".picture-container").empty()
+    $(".picture-container").append($(picArray[i]).clone())
+  } else if (i>=3) {
+    i=0
+    $(".picture-container").empty()
+    $(".picture-container").append($(picArray[i]).clone())
+
+  }
+})
+
+$(".back").click(function(){
+  if(i>0) {
+  i--
+  $(".picture-container").empty()
+  $(".picture-container").append($(picArray[i]).clone())
+} else if (i==0) {
+  i=4
+  $(".picture-container").empty()
+  $(".picture-container").append($(picArray[i]).clone())
+
+}
+})
+
+});

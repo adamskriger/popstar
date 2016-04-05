@@ -4,15 +4,27 @@
 <p> Zipcode: <%= @store.zipcode %> </p>
 <p> Long Description: <%= @store.long_description %> </p>
 
-<%= image_tag(@store.image(:medium), class: "img-responsive") %>
-<%= image_tag(@store.image2(:medium), class: "img-responsive") %>
-<%= image_tag(@store.image3(:medium), class: "img-responsive") %>
-<%= image_tag(@store.image4(:medium), class: "img-responsive", :rel => "lightbox") %>
+<div class="lightbox">
+<button class="back">Back</button>
+
+<div class="picture-container">
+
+
+</div>
+<button class="forward">Forward</button>
+
+</div>
+
+
+
+<div class="picture pic1"><%= image_tag(@store.image(:medium), class: "img-responsive") %></div>
+<div class="picture pic2"><%= image_tag(@store.image2(:medium), class: "img-responsive") %></div>
+<div class="picture pic3"><%= image_tag(@store.image3(:medium), class: "img-responsive") %>
+<div class="picture pic4"><%= image_tag(@store.image4(:medium), class: "img-responsive") %>
 
 
 
 
-<%= link_to image_tag(@store.image(:medium)), image_path(@store.image(:medium)), data: { :lightbox => "news", :title => "MyCaption" } %>
 
 
 

@@ -19,6 +19,7 @@ source 'https://rubygems.org'
   gem 'videojs_rails'
   gem 'lightbox2-rails'
   gem 'rubylight'
+  gem 'fancybox-rails'
 
 
 

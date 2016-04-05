@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'example/show'
+
   resources :photos
   get 'welcome/index'
 
@@ -12,6 +14,10 @@ Rails.application.routes.draw do
     resources :stores do
       resources :comments
     end
+
+
+resource :example, only: [:show], controller: :example
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
