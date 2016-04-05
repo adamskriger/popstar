@@ -4,8 +4,16 @@
 
 
 
-.container  {
-     width: auto;
+
+.main_container {
+  width: auto;
+  text-align: center;
+
+}
+
+.mini_container {
+     margin-left: auto;
+     margin-right: auto;
 }
 
 .index_div {
@@ -14,6 +22,7 @@
   float: left;
   margin: 8px;
   position: relative;
+
 }
 
 .inside_text {
@@ -130,7 +139,9 @@ padding: 10px;
     }
 }
 
-
+.form-group {
+  margin-top: 30px;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
