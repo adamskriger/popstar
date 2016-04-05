@@ -10,6 +10,7 @@ Rails.application.configure do
     }
   }
 
+  config.assets.precompile += %w( video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff )
 
   # Settings specified here will take precedence over those in config/application.rb.
 
