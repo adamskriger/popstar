@@ -252,7 +252,7 @@ a:hover{
   div{width:70%;}
 }
 @media screen and (max-device-width: 800px) {
-  html { background: url(//demosthenes.info/assets/images/polina.jpg) #000 no-repeat center center fixed; }
+  html { background: url(/Users/Adam1/rails_apps/popstar/app/assets/images/Paulina_still.png) #000 no-repeat center center fixed; }
   #bgvid { display: none; }
 }
 
@@ -266,11 +266,13 @@ a:hover{
     // margin: -125px -225px;
     margin: -72px auto;
     position: relative;
-    width: 95%;
+    width: 100%;
+    display: inline-block;
     /*box-shadow*/
     -webkit-box-shadow: 0 0 5px #000;
     -moz-box-shadow: 0 0 5px #000;
     box-shadow: 0 0 5px #000;
+    overflow-x: hidden;
 
 }
 .slider .frames {
@@ -315,14 +317,14 @@ a:hover{
     -webkit-border-radius: 0 25px 25px 0;
     -moz-border-radius: 0 25px 25px 0;
     border-radius: 0 25px 25px 0;
-    left: 0;
+    left: 20px;
 }
 .slider .frames .slide nav .next {
     /*border-radius*/
     -webkit-border-radius: 25px 0 0 25px;
     -moz-border-radius: 25px 0 0 25px;
     border-radius: 25px 0 0 25px;
-    right: 0;
+    right: 40px;
 }
 .slider .frames .slide nav a:hover { background: #000 }
 .slider .quicknav {
