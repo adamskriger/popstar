@@ -11,18 +11,35 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+
+
+
 //= require jquery
 //= require jquery_ujs
+//= require bxslider
 //= require_tree .
 
-//= require('jquery')
+
+//= require owl.carousel
+
+//= require jquery.lightbox-0.5
+//= require carousel
+
+
 //= require('bootstrap-sprockets')
 //= require jquery.vide
 //= require video
 //= require lightbox
 //= require fancybox
 
+
 $(document).ready(function() {
+
+
+
+
+
 
   var picArray = [$(".pic1"), $(".pic2"),$(".pic3"),$(".pic4")];
   var i=0;
@@ -61,5 +78,7 @@ $(".back").click(function(){
 
 }
 })
+
+
 
 });

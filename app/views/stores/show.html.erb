@@ -1,3 +1,45 @@
+<div class="slider">
+    <ul class="frames">
+        <li id="one" class="slide">
+          <%= image_tag(@store.image(:medium), class: "img-responsive") %>
+            <nav>
+                <a class="prev" href="#five">&larr;</a>
+                <a class="next" href="#two">&rarr;</a>
+            </nav>
+        </li>
+        <li id="two" class="slide">
+          <%= image_tag(@store.image2(:medium), class: "img-responsive") %>
+            <nav>
+                <a class="prev" href="#one">&larr;</a>
+                <a class="next" href="#three">&rarr;</a>
+            </nav>
+        </li>
+        <li id="three" class="slide">
+          <%= image_tag(@store.image3(:medium), class: "img-responsive") %>
+            <nav>
+                <a class="prev" href="#two">&larr;</a>
+                <a class="next" href="#four">&rarr;</a>
+            </nav>
+        </li>
+        <li id="four" class="slide">
+          <%= image_tag(@store.image4(:medium), class: "img-responsive") %>
+            <nav>
+                <a class="prev" href="#three">&larr;</a>
+                <a class="next" href="#five">&rarr;</a>
+            </nav>
+        </li>
+        <li class="quicknav">
+            <ul>
+                <li><a href="#one"></a></li>
+                <li><a href="#two"></a></li>
+                <li><a href="#three"></a></li>
+                <li><a href="#four"></a></li>
+                <li><a href="#five"></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
 <%= @store.caption%>
 <h2> Company Name: <%= @store.user.company_name %> </h2>
 <h3> Headline: <%= @store.caption %> </h3>
@@ -19,12 +61,8 @@
 
 <div class="picture pic1"><%= image_tag(@store.image(:medium), class: "img-responsive") %></div>
 <div class="picture pic2"><%= image_tag(@store.image2(:medium), class: "img-responsive") %></div>
-<div class="picture pic3"><%= image_tag(@store.image3(:medium), class: "img-responsive") %>
-<div class="picture pic4"><%= image_tag(@store.image4(:medium), class: "img-responsive") %>
-
-
-
-
+<div class="picture pic3"><%= image_tag(@store.image3(:medium), class: "img-responsive") %></div>
+<div class="picture pic4"><%= image_tag(@store.image4(:medium), class: "img-responsive") %></div>
 
 
 
@@ -61,4 +99,5 @@
     </div>
     <% end %>
     <% end %>
+
     <% end %>
