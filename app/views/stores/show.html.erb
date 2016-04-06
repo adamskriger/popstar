@@ -90,35 +90,47 @@
 
   <% if @store.user.id == current_user.id %>
 
-  <button><%= link_to 'Edit Your Store', edit_store_path(@store) %></button>
+  <div class="edit_buttons_themselves"><%= link_to 'Edit Your Store', edit_store_path(@store), {:class => "polina_button", :style=>'text-align:center'}; %></div>
 
 
-  <button><%= link_to "Delete", store_path(@store), method: :delete, data: {confirm: "Are you sure you  want to delete this store?"}%></button>
+  <div class="edit_buttons_themselves"><%= link_to "Delete This Store", store_path(@store), method: :delete, data: {confirm: "Are you sure you  want to delete this store?"}, :class => "polina_button" %><div>
 
   <% end %>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
 
-<hr>
+
   <!-- Display Add Comment -->
+<div class="comments_section">
+      <div class="comment-form col-sm-11">
+        <%= form_for [@store, @store.comments.new] do |f| %>
+        <%= f.text_field :content, placeholder: 'Add'%>
+        <%= f.submit 'Add'%>
+      </div>
+      <div>
+          <% if @store.comments %>
+            <% @store.comments.each do |comment| %>
+          <!-- Display Actual Comment -->
 
-    <div class="comment-form col-sm-11">
-      <%= form_for [@store, @store.comments.new] do |f| %>
-      <%= f.text_field :content, placeholder: 'Add'%>
-      <%= f.submit 'Add'%>
-    </div>
-    <div>
-        <% if @store.comments %>
-          <% @store.comments.each do |comment| %>
-        <!-- Display Actual Comment -->
+           <div class="comment-content">
+            <%= comment.content %>
+            <% if comment.user == current_user %>
+            <button><%= link_to "Delete This Comment",  store_comment_path(@store, comment), method: :delete, data: { confirm: "Are you sure?" } %></button>
+            <% end %>
+          </div>
 
-         <div class="comment-content">
-          <%= comment.content %>
-          <% if comment.user == current_user %>
-          <button><%= link_to "Delete This Comment",  store_comment_path(@store, comment), method: :delete, data: { confirm: "Are you sure?" } %></button>
-          <% end %>
-        </div>
-
-    </div>
+      </div>
+  </div>
     <% end %>
     <% end %>
 
