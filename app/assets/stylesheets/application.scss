@@ -262,7 +262,7 @@ a:hover{
 /* Slider */
 .slider {
     height: 375px;
-    // left: 50%;
+    left: 0px;
     // margin: -125px -225px;
     margin: -72px auto;
     position: relative;
@@ -276,6 +276,7 @@ a:hover{
 .slider .frames {
     height: 250px;
     position: relative;
+    margin-left: -45px;
 }
 .slider .frames .slide {
     height: 250px;
