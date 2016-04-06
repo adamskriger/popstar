@@ -266,7 +266,7 @@ a:hover{
     // margin: -125px -225px;
     margin: -72px auto;
     position: relative;
-    width: 99%;
+    width: 95%;
     /*box-shadow*/
     -webkit-box-shadow: 0 0 5px #000;
     -moz-box-shadow: 0 0 5px #000;
@@ -276,7 +276,7 @@ a:hover{
 .slider .frames {
     height: 250px;
     position: relative;
-    margin-left: -45px;
+    margin-left: -65px;
 }
 .slider .frames .slide {
     height: 250px;
@@ -288,7 +288,8 @@ a:hover{
 .slider .frames .slide img {
     position: relative;
     height: 375px;
-    width: 100%;
+    width: 99%;
+
 }
 .slider .frames .slide nav a {
     background: hsla(0,0%,0%,.75);
@@ -296,7 +297,7 @@ a:hover{
     font-size: 16px;
     line-height: 50px;
     margin-top: -25px;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     text-align: center;
     text-decoration: none;
