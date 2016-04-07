@@ -3,12 +3,11 @@ class StoresController < ApplicationController
   before_action :owned_store, only: [:edit, :update, :destroy]
 
   def index
+
     @search = Store.search do
       fulltext params[:search]
     end
     @stores = @search.results
-
-
 
   end
 
