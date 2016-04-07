@@ -7,6 +7,9 @@ class StoresController < ApplicationController
       fulltext params[:search]
     end
     @stores = @search.results
+
+
+
   end
 
   def new
