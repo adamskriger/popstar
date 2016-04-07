@@ -31,7 +31,6 @@
 //= require jquery.vide
 //= require video
 //= require lightbox
-//= require fancybox
 
 
 $(document).ready(function() {
@@ -79,6 +78,10 @@ $(".back").click(function(){
 }
 })
 
+$(".Add").click(function(){
+  console.log("click on Add");
+  $(".comments_section").prepend($(comment.content))
 
+})
 
 });

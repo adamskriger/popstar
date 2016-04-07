@@ -13,13 +13,13 @@
     <li><%= link_to image_tag("popstar_logo.png", :size => "80x80"), root_path %></li>
   </ul>
   </div>
-  <form class="navbar-form navbar-left" role="search">
+  <form class="navbar-form navbar-left search-bar" role="search">
 
   <div class="form-group">
 
   <%= form_tag stores_path, :method => :get do %>
       <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Find My Space", :class => "btn btn-default",  :name => nil %>
+      <%= submit_tag "Find My Space", :class => "btn btn-default",  :name => nil, :class => 'polina_button frontpage' %>
   <% end %>
 
 </div>

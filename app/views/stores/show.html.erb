@@ -1,43 +1,45 @@
-<div class="slider">
-    <ul class="frames">
-        <li id="one" class="slide">
-          <%= image_tag(@store.image(:medium), class: "img-responsive") %>
-            <nav>
-                <a class="prev" href="#four">&larr;</a>
-                <a class="next" href="#two">&rarr;</a>
-            </nav>
-        </li>
-        <li id="two" class="slide">
-          <%= image_tag(@store.image2(:medium), class: "img-responsive") %>
-            <nav>
-                <a class="prev" href="#one">&larr;</a>
-                <a class="next" href="#three">&rarr;</a>
-            </nav>
-        </li>
-        <li id="three" class="slide">
-          <%= image_tag(@store.image3(:medium), class: "img-responsive") %>
-            <nav>
-                <a class="prev" href="#two">&larr;</a>
-                <a class="next" href="#four">&rarr;</a>
-            </nav>
-        </li>
-        <li id="four" class="slide">
-          <%= image_tag(@store.image4(:medium), class: "img-responsive") %>
-            <nav>
-                <a class="prev" href="#three">&larr;</a>
-                <a class="next" href="#one">&rarr;</a>
-            </nav>
-        </li>
-        <li class="quicknav">
-            <ul>
-                <li><a href="#one"></a></li>
-                <li><a href="#two"></a></li>
-                <li><a href="#three"></a></li>
-                <li><a href="#four"></a></li>
-            </ul>
-        </li>
-    </ul>
-</div>
+  <!-- Top Image start -->
+  <div class="slider">
+      <ul class="frames">
+          <li id="one" class="slide">
+            <%= image_tag(@store.image(:medium), class: "img-responsive") %>
+              <nav>
+                  <a class="prev" href="#four">&larr;</a>
+                  <a class="next" href="#two">&rarr;</a>
+              </nav>
+          </li>
+          <li id="two" class="slide">
+            <%= image_tag(@store.image2(:medium), class: "img-responsive") %>
+              <nav>
+                  <a class="prev" href="#one">&larr;</a>
+                  <a class="next" href="#three">&rarr;</a>
+              </nav>
+          </li>
+          <li id="three" class="slide">
+            <%= image_tag(@store.image3(:medium), class: "img-responsive") %>
+              <nav>
+                  <a class="prev" href="#two">&larr;</a>
+                  <a class="next" href="#four">&rarr;</a>
+              </nav>
+          </li>
+          <li id="four" class="slide">
+            <%= image_tag(@store.image4(:medium), class: "img-responsive") %>
+              <nav>
+                  <a class="prev" href="#three">&larr;</a>
+                  <a class="next" href="#one">&rarr;</a>
+              </nav>
+          </li>
+          <li class="quicknav">
+              <ul>
+                  <li><a href="#one"></a></li>
+                  <li><a href="#two"></a></li>
+                  <li><a href="#three"></a></li>
+                  <li><a href="#four"></a></li>
+              </ul>
+          </li>
+      </ul>
+  </div>
+  <!-- Top Image ends -->
 
 <br>
 <br>
@@ -47,6 +49,7 @@
 <h2 class="store_caption"> <%= @store.caption %> </h2>
 <hr>
 
+  <!-- show company name & zipcode start -->
   <div>
     <div class= "contains_inners">
       <h5 class="details">Details</h5>
@@ -65,73 +68,76 @@
       <div class="long_descriptionn second_inner"><%= @store.zipcode %> </p></div>
     </div>
   </div>
-  <br>
+  <!-- show company name & zipcode ends -->
 
+<br>
 <hr>
 
+  <!-- Long Description start -->
+  <div class= "second_details">
+    <div class= "contains_inners">
+    </div>
 
-<div class= "second_details">
-  <div class= "contains_inners">
+    <div class= "contains_inners">
+      <div class="first_inner">Description: </div>
+      <div class="long_descriptionn second_inner"><p> <div class="long_descriptionn"><p><%= @store.long_description %> </p> </div>
+   </p></div>
+    </div>
   </div>
+  <!-- Long Description ends -->
 
-  <div class= "contains_inners">
-    <div class="first_inner">Description: </div>
-    <div class="long_descriptionn second_inner"><p> <div class="long_descriptionn"><p><%= @store.long_description %> </p> </div>
- </p></div>
-  </div>
-
-
-</div>
 <br>
-
 <hr>
 
-<div class="edit_buttons">
+  <!-- show edit / delete store start -->
+  <div class="edit_buttons">
 
-  <% if @store.user.id == current_user.id %>
+    <% if @store.user.id == current_user.id %>
 
-  <div class="edit_buttons_themselves"><%= link_to 'Edit Your Store', edit_store_path(@store), {:class => "polina_button", :style=>'text-align:center'}; %></div>
-
-
-  <div class="edit_buttons_themselves"><%= link_to "Delete This Store", store_path(@store), method: :delete, data: {confirm: "Are you sure you  want to delete this store?"}, :class => "polina_button" %><div>
-
-  <% end %>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br>
+    <div class="edit_buttons_themselves"><%= link_to 'Edit Your Store', edit_store_path(@store), {:class => "polina_button", :style=>'text-align:center'}; %></div>
 
 
-  <!-- Display Add Comment -->
-<div class="comments_section">
+    <div class="edit_buttons_themselves"><%= link_to "Delete This Store", store_path(@store), method: :delete, data: {confirm: "Are you sure you  want to delete this store?"}, :class => "polina_button" %></div>
+
+    <% end %>
+  </div>
+  <!-- show edit / delete store ends -->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  <!-- Add Comment Form Start -->
+  <div class="comments_section">
       <div class="comment-form col-sm-11">
         <%= form_for [@store, @store.comments.new] do |f| %>
-        <%= f.text_field :content, placeholder: 'Add'%>
-        <%= f.submit 'Add'%>
+        <%= f.text_field :content, placeholder: 'Add Comment Here'%>
+        <%= f.submit 'Add a Comment', :class => "Add"%>
       </div>
-      <div>
+      <div class="comments_if">
           <% if @store.comments %>
             <% @store.comments.each do |comment| %>
           <!-- Display Actual Comment -->
 
-           <div class="comment-content">
-            <%= comment.content %>
+            <div class="comment-content">
+              <%= comment.content %>
             <% if comment.user == current_user %>
-            <button><%= link_to "Delete This Comment",  store_comment_path(@store, comment), method: :delete, data: { confirm: "Are you sure?" } %></button>
-            <% end %>
+            <%= link_to "Delete This Comment",  store_comment_path(@store, comment), method: :delete, data: { confirm: "Are you sure?" } %>
           </div>
-
       </div>
+      <% end %>
   </div>
-    <% end %>
-    <% end %>
+  <!-- Add Comment Form Ends -->
 
-    <% end %>
+<% end %>
+<% end %>
+<% end %>

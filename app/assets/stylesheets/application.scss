@@ -108,6 +108,15 @@ padding: 10px;
 }
 
 /* navbar */
+#search {
+  float: left;
+}
+.search-bar{
+  width: 500px;
+}
+.polina_button frontpage {
+  float: left;
+}
 .navbar-default {
     background-color: black;
     border-color: black;
@@ -180,6 +189,9 @@ padding: 10px;
 
 .form-group {
   margin-top: 30px;
+  float: left;
+  display: inline;
+  width: 800px;
 }
 
 .video-js {
@@ -429,19 +441,20 @@ a:hover{
   font-weight:100;
   background: rgba(0,0,0,0.5);
   color: white;
-  width: 35%;
+  width: 380px;
   margin-left: 35rem;
 
   font-size: 1.2rem;
   text-align: center;
   height: 4.5rem;
+
 }
 
 
 
 .polina_button {
   display: block;
-  width: 80%;
+  width: 20%;
   padding: .4rem;
   border: none;
   margin: 1rem auto;
@@ -451,14 +464,23 @@ a:hover{
   border-radius: 3px;
   cursor: pointer;
   transition: .3s background;
+  float: left;
+  position:relative;
+  top: -10px;
+  left: 7px;
 }
 
 .polina_button:hover {
-   background: rgba(0,0,0,0.5);
+   background: tomato;
 }
 
 .comments_section {
   display: inline-block;
+  background-color: tomato;
+}
+
+.comments_if {
+  back: #ff6600;
 }
 
 .edit_buttons_themselves {
