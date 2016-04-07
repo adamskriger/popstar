@@ -1,18 +1,20 @@
-<h2>Sign up</h2>
+<%= videojs_rails sources: { mp4: "https://s3.amazonaws.com/popstarvideos/ShopkeepingVideo.mp4"}, controls: false, autoplay: true, preload: 'auto',  width: '980' %>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs
-  <%= f.input :company_name, required: true, autofocus: true %>
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+  <div class="form-inputs" id="polina">
+    <h2 class= "signup">Sign up</h2>
+
+  <%= f.input :company_name, required: true, autofocus: true, :label => '', :placeholder => 'Company Name' %>
+    <%= f.input :email, required: true, autofocus: true, :label => '', :placeholder => 'E-mail'%>
+    <%= f.input :password, required: true,:placeholder => 'Password', :label => '', hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+    <%= f.input :password_confirmation, required: true, :label => '', :placeholder => 'Password Confirmation' %>
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up" %>
+    </div>
+
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
+
 <% end %>
-
-<%= render "devise/shared/links" %>

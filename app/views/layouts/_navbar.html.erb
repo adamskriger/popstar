@@ -18,7 +18,7 @@
   <div class="form-group">
 
   <%= form_tag stores_path, :method => :get do %>
-      <%= text_field_tag :search, params[:search] %>
+      <%= text_field_tag :search, params[:search], :placeholder => "Search"  %>
       <%= submit_tag "Find My Space", :class => "btn btn-default",  :name => nil, :class => 'polina_button frontpage' %>
   <% end %>
 
