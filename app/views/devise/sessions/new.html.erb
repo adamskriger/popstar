@@ -1,10 +1,14 @@
-<h2>Log in</h2>
+<%= videojs_rails sources: { mp4: "https://s3.amazonaws.com/popstarvideos/ShopkeepingVideo.mp4"}, controls: false, autoplay: true, preload: 'auto',  width: '980' %>
+
+
+<div id="polina">
+  <h2 class="signup">Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    <%= f.input :email, required: false, :placeholder => 'E-mail', autofocus: true, label: false %>
+    <%= f.input :password, :placeholder => 'Password', required: false, label: false %>
+    <%= f.input :remember_me, :class => "remember_me", as: :boolean if devise_mapping.rememberable? %>
   </div>
 
   <div class="form-actions">
@@ -13,3 +17,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
