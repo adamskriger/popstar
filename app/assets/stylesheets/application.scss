@@ -555,6 +555,24 @@ a:hover{
   left: 7px;
 }
 
+.front_page_button {
+  display: block;
+  width: 90%;
+  text-align: center;
+  padding: .4rem;
+  border: none;
+  margin: 1rem 1rem auto auto;
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .3s background;
+  float: left;
+  position:relative;
+
+}
+
 .extra_buttons{
 margin-left: 5.3rem;
 }
