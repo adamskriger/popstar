@@ -12,6 +12,18 @@ source 'https://rubygems.org'
   gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
   gem 'pry-rails'
   gem 'dotenv-rails'
+  gem 'sunspot'
+  gem 'sunspot_rails'
+  gem 'sunspot_solr'
+  gem 'vider', github: 'wazery/vider'
+  gem 'videojs_rails'
+  gem 'lightbox2-rails'
+  gem 'rubylight'
+  gem 'bxslider-rails'
+  gem 'carousel'
+  gem 'owlcarousel-rails', github: 'acrogenesis/owlcarousel-rails', branch: 'OwlCarousel2'
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -56,3 +68,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+gem 'rails_12factor', group: :production
+ruby "2.3.0"

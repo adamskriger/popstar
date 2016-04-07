@@ -1,12 +1,16 @@
 class Store < ActiveRecord::Base
   belongs_to :user
-  validates :user_id, :image,:image2, :image3, :image4,  presence: true
+  has_many :comments
+
+  validates :user_id, :image,:image2, :image3, :image4, :zipcode, :long_description,  presence: true
+
+  searchable do
+    text :caption, :zipcode, :long_description
+    end
 
 
-
-
-  has_attached_file :image, styles: { :medium => "640x" }
-  validates_attachment_content_type :image, :content_type =>
+has_attached_file :image, styles: { :medium => "640x" }
+validates_attachment_content_type :image, :content_type =>
 /\Aimage\/.*\Z/
 
 has_attached_file :image2, styles: { :medium => "640x" }

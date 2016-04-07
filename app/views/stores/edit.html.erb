@@ -7,13 +7,16 @@
 
   <%= @store.caption%>
 
-    <%= simple_form_for @store do |f| %>
-   <%= f.input :image %>
-   <%= f.input :image2 %>
-   <%= f.input :image3 %>
-   <%= f.input :image4 %>
-   <%= f.input :caption %>
-   <%= f.button :submit %>
+  <%= simple_form_for @store do |f| %>
+  <%= f.input :image %>
+  <%= f.input :image2 %>
+  <%= f.input :image3 %>
+  <%= f.input :image4 %>
+  <%= f.input :zipcode %>
+  <%= f.input :caption %>
+  <%= f.input :long_description %>
+  <%= f.button :submit %>
   <% end %>
+
 
   <button><%= link_to "Delete", store_path(@store), method: :delete, data: {confirm: "Are you sure you  want to delete this post?"}%></button>

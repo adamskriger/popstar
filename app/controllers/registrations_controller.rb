@@ -1,7 +1,14 @@
 class RegistrationsController < Devise::RegistrationsController
 
+  def search
+    if params[:search]
+               search_param = CGI::escapeHTML(params[:search])
 
+               redirect_to ("/stores?search=#{search_param}&commit=Search")
 
+              return
+         end
+  end
 
   private
 

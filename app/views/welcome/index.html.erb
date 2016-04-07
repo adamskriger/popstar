@@ -1,2 +1,14 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+
+<%= videojs_rails sources: { mp4: "https://s3.amazonaws.com/popstarvideos/ShopkeepingVideo.mp4"}, controls: false, autoplay: true, preload: 'auto',  width: '980' %>
+
+
+<div id="polina">
+  <h1>Popstar</h1>
+  <a >Follow Us On Twitter</a>
+  <br>
+      <h4>Create and find popup stores in the coolest locations.</h4>
+      <h4>We connect brands and boutiques with retail properties available for short terms.</h4>
+      <%= link_to "Open a Popup", new_store_path, :class => "front_page_button" %>
+      <%= link_to "Find a Popup", stores_path, :class => "front_page_button" %>
+
+</div>

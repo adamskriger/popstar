@@ -1,10 +1,24 @@
-<%= simple_form_for @store do |f| %>
-<%= f.input :image %>
-<%= f.input :image2 %>
-<%= f.input :image3 %>
-<%= f.input :image4 %>
+
+<div class="backstop">
+
+<div class="new_store_container">
+
+  <h1 class="new_store_header">List Your Space</h1>
 
 
-<%= f.input :caption %>
-<%= f.button :submit %>
-<% end %>
+    <div class="add_store">
+    <div class="add_form_field"><%= simple_form_for @store do |f| %></div>
+    <div class="add_form_field"><%= f.input :image %></div><hr>
+    <div class="add_form_field"><%= f.input :image2 %></div><hr>
+    <div class="add_form_field"><%= f.input :image3 %></div><hr>
+    <div class="add_form_field"><%= f.input :image4 %></div><hr>
+
+    <div class="add_form_field"><%= f.input :zipcode, :placeholder => 'Property Zipcode', label: false %></div><hr>
+    <div class="add_form_field"><%= f.input :caption, :id => "headline", :placeholder => 'Headline', label: false%></div><hr>
+    <div class="add_form_field"><h6>Please describe your property</h6></div>
+    <div class="add_form_field"><%= f.text_area :long_description, :id => "message_area", :cols => 50, :rows => 10 %></div>
+
+    <%= f.button :submit %>
+    <% end %>
+    </div>
+</div>
