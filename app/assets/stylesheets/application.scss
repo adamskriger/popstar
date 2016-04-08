@@ -542,7 +542,7 @@ a:hover{
 .comments_section {
   display: inline-block;
   background-color: tomato;
-  width: 100%; 
+  width: 100%;
   text-align: center;
   height: auto;
 }
@@ -557,6 +557,8 @@ a:hover{
 .comment-content {
   display: inline-block;
   background-color: red;
+  text-align: center; 
+
 }
 
 .edit_buttons_themselves {
