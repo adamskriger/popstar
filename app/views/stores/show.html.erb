@@ -132,7 +132,7 @@
             <div class="comment-content">
               <%= comment.content %>
             <% if comment.user == current_user %>
-            <i class="btn-icon-only icon-remove"><%= link_to "Delete This Comment",  store_comment_path(@store, comment), method: :delete, data: { confirm: "Are you sure?" } %></i>
+            <i<%= link_to raw("<i class=\"icon-search icon-white\">Add To Cart</i>"), store_comment_path(@store, comment), method: :delete, data: { confirm: "Are you sure?" } %>
           </div><br>
       </div>
       <% end %>
