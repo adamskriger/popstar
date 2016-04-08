@@ -118,6 +118,7 @@
 
   <!-- Add Comment Form Start -->
   <div class="comments_section">
+    <h2>Add A Comment</h2>
       <div class="comment-form col-sm-11">
         <%= form_for [@store, @store.comments.new] do |f| %>
         <%= f.text_field :content, placeholder: 'Add Comment Here'%>

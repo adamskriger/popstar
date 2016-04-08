@@ -543,10 +543,20 @@ a:hover{
   display: inline-block;
   background-color: tomato;
   width: 100%
+  text-align: center; 
+  height: auto;
 }
 
 .comments_if {
   back: #ff6600;
+  width: 100%;
+  text-align: center;
+
+}
+
+.comment-content{
+  display: inline-block;
+
 }
 
 .edit_buttons_themselves {
