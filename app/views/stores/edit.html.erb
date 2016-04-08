@@ -1,22 +1,24 @@
 
+<div class="backstop">
 
-  <%= image_tag(@store.image(:medium), class: "img-responsive") %>
-  <%= image_tag(@store.image2(:medium), class: "img-responsive") %>
-  <%= image_tag(@store.image3(:medium), class: "img-responsive") %>
-  <%= image_tag(@store.image4(:medium), class: "img-responsive") %>
+<div class="new_store_container">
 
-  <%= @store.caption%>
-
-  <%= simple_form_for @store do |f| %>
-  <%= f.input :image %>
-  <%= f.input :image2 %>
-  <%= f.input :image3 %>
-  <%= f.input :image4 %>
-  <%= f.input :zipcode %>
-  <%= f.input :caption %>
-  <%= f.input :long_description %>
-  <%= f.button :submit %>
-  <% end %>
+  <h1 class="new_store_header">Edit Your Space</h1>
 
 
-  <button><%= link_to "Delete", store_path(@store), method: :delete, data: {confirm: "Are you sure you  want to delete this post?"}%></button>
+    <div class="add_store">
+    <div class="add_form_field"><%= simple_form_for @store do |f| %></div>
+    <div class="add_form_field"><%= f.input :image %></div><hr>
+    <div class="add_form_field"><%= f.input :image2 %></div><hr>
+    <div class="add_form_field"><%= f.input :image3 %></div><hr>
+    <div class="add_form_field"><%= f.input :image4 %></div><hr>
+
+    <div class="add_form_field"><%= f.input :zipcode, :placeholder => 'Property Zipcode', label: false %></div><hr>
+    <div class="add_form_field"><%= f.input :caption, :id => "headline", :placeholder => 'Headline', label: false%></div><hr>
+    <div class="add_form_field"><h6>Please describe your property</h6></div>
+    <div class="add_form_field"><%= f.text_area :long_description, :id => "message_area", :cols => 50, :rows => 10 %></div>
+
+    <%= f.button :submit %>
+    <% end %>
+    </div>
+</div>
