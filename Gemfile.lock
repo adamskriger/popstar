@@ -66,12 +66,12 @@ GEM
     arel (6.0.3)
     autoprefixer-rails (6.3.6)
       execjs
-    aws-sdk (2.2.31)
-      aws-sdk-resources (= 2.2.31)
-    aws-sdk-core (2.2.31)
+    aws-sdk (2.2.33)
+      aws-sdk-resources (= 2.2.33)
+    aws-sdk-core (2.2.33)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.2.31)
-      aws-sdk-core (= 2.2.31)
+    aws-sdk-resources (2.2.33)
+      aws-sdk-core (= 2.2.33)
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -80,7 +80,7 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.2)
     bxslider-rails (4.2.5.1)
-    byebug (8.2.2)
+    byebug (8.2.4)
     carousel (1.1.2)
       jquery-rails
       rails
@@ -119,7 +119,7 @@ GEM
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
-    jmespath (1.2.3)
+    jmespath (1.2.4)
       json_pure (>= 1.8.1)
     jquery-rails (4.1.1)
       rails-dom-testing (>= 1, < 3)
@@ -207,14 +207,13 @@ GEM
       activemodel (~> 4.0)
     slop (3.6.0)
     spring (1.6.4)
-    sprockets (3.5.2)
+    sprockets (3.6.0)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (3.0.4)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.11)
     sunspot (2.2.5)
       pr_geohash (~> 1.0)
       rsolr (~> 1.1.1)
@@ -232,7 +231,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
-    videojs_rails (4.12.14)
+    videojs_rails (4.12.15)
     warden (1.2.6)
       rack (>= 1.0)
     web-console (2.3.0)
@@ -267,7 +266,6 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   simple_form (~> 3.1.0)
   spring
-  sqlite3
   sunspot
   sunspot_rails
   sunspot_solr
