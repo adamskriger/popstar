@@ -16,12 +16,9 @@ source 'https://rubygems.org'
   gem 'sunspot_rails'
   gem 'sunspot_solr'
   gem 'vider', github: 'wazery/vider'
-  # gem 'videojs_rails'
+  gem 'videojs_rails'
   gem 'lightbox2-rails'
   gem 'rubylight'
-  gem 'bxslider-rails'
-  gem 'carousel'
-  gem 'owlcarousel-rails', github: 'acrogenesis/owlcarousel-rails', branch: 'OwlCarousel2'
 
 
 

@@ -17,14 +17,10 @@
 
 //= require jquery
 //= require jquery_ujs
-//= require bxslider
 //= require_tree .
 
 
-//= require owl.carousel
 
-//= require jquery.lightbox-0.5
-//= require carousel
 
 
 //= require('bootstrap-sprockets')
