@@ -105,17 +105,22 @@
 
 <br>
 <br>
-
+<hr>
 
   <!-- Add Comment Form Start -->
   <div class="comments_section">
     <h2>Add A Comment</h2>
+    <br>
       <div class="comment-form col-sm-11">
         <%= form_for [@store, @store.comments.new] do |f| %>
         <%= f.text_field :content, placeholder: 'Add Comment Here'%>
         <%= f.submit 'Add a Comment', :class => "Add"%>
       </div>
+    <br>
+    <br>
+    <br>
       <div class="comments_if">
+        <h2 class="comments_header">Comments</h2>
           <% if @store.comments %>
             <% @store.comments.each do |comment| %>
           <!-- Display Actual Comment -->

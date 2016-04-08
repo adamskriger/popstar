@@ -568,11 +568,22 @@ a:hover{
 
 }
 
+.comments_header {
+  position: relative;
+  text-align: center;
+  margin-left: 52%; 
+}
+
+comment-form col-sm-11 {
+  margin-bottom: 10px;
+}
 .edit_buttons_themselves {
   position: relative;
   float: left;
   width: 190px;
 }
+
+
 
 .registration_button {
   display: block;
