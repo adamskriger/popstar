@@ -24,9 +24,7 @@
 
 
 //= require('bootstrap-sprockets')
-//= require jquery.vide
 //= require video
-//= require lightbox
 
 
 $(document).ready(function() {
