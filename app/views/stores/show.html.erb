@@ -133,7 +133,7 @@
               <%= comment.content %>
             <% if comment.user == current_user %>
             <%= link_to "Delete This Comment",  store_comment_path(@store, comment), method: :delete, data: { confirm: "Are you sure?" } %>
-          </div>
+          </div><br>
       </div>
       <% end %>
   </div>
