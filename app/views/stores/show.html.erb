@@ -132,7 +132,7 @@
             <div class="comment-content">
               <%= comment.content %>
             <% if comment.user == current_user %>
-            <i<%= link_to "U+1F5D1",  store_comment_path(@store, comment), method: :delete, data: { confirm: "Are you sure?" } %>
+            <%= link_to "&#128465;",  store_comment_path(@store, comment), method: :delete, data: { confirm: "Are you sure?" } %>
           </div><br>
       </div>
       <% end %>
