@@ -486,7 +486,7 @@ a:hover{
   background: rgba(0,0,0,0.5);
   color: white;
   width: 380px;
-  margin-left: 35rem;
+  margin-left: 39rem;
 
   font-size: 1.2rem;
   text-align: center;
@@ -541,7 +541,7 @@ a:hover{
 }
 .comments_section {
   display: inline-block;
-  background-color: tomato;
+  background-color: none;
   width: 100%;
   text-align: center;
   height: auto;
@@ -550,20 +550,21 @@ a:hover{
 .comments_if {
   position: relative;
   right: 50px;
-  background: #ff6600;
+  background: none;
   width: 980px;
   text-align: center;
-  left: -16%;
+  left: -16.5%;
 }
 
 .comment-content {
   position: relative;
-  left: 32%;
+  left: 28%;
   display: inline-block;
-  background-color: red;
+  background-color: none;
   text-align: center;
   width: 500px;
   word-wrap: normal;
+  margin-bottom: 5px;
 
 }
 
