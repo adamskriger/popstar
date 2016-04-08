@@ -548,19 +548,22 @@ a:hover{
 }
 
 .comments_if {
+  position: relative;
+  right: 50px;
   background: #ff6600;
   width: 980px;
   text-align: center;
+  left: -16%; 
 }
 
 .comment-content {
+  position: relative;
+  left: 32%;
   display: inline-block;
   background-color: red;
   text-align: center;
   width: 500px;
   word-wrap: normal;
-  margin-left: 50%;
-  margin-right: 50%;
 
 }
 
