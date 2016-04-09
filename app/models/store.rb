@@ -1,6 +1,6 @@
 class Store < ActiveRecord::Base
   belongs_to :user
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   validates :user_id, :image,:image2, :image3, :image4, :zipcode, :long_description,  presence: true
 
