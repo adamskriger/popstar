@@ -502,7 +502,11 @@ a:hover{
 
 }
 
-
+.edit_buttons_themselves {
+  position: relative;
+  float: left;
+  width: 190px;
+}
 
 .polina_button {
   display: block;
@@ -585,11 +589,7 @@ a:hover{
 comment-form col-sm-11 {
   margin-bottom: 10px;
 }
-.edit_buttons_themselves {
-  position: relative;
-  float: left;
-  width: 190px;
-}
+
 
 
 
