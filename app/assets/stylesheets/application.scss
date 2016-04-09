@@ -148,6 +148,7 @@ padding: 10px;
     background-color: black;
     border-color: black;
     opacity: 30%;
+    margin-bottom: 0px !important;
 }
 /* title */
 .navbar-default .navbar-brand {
@@ -228,7 +229,6 @@ padding: 10px;
 
 video {
     position: fixed;
-    top: 50%;
     left: 50%;
     min-width: 100%;
     min-height: 100%;
@@ -236,7 +236,7 @@ video {
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
- background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+ background: url('Paulina_still.png') no-repeat;
   background-size: cover;
   transition: 1s opacity;
 }
