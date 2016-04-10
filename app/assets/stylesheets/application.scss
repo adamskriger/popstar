@@ -526,11 +526,16 @@ a:hover{
     height: auto;
     background-color: white;
     margin:50px 50px;
+    word-wrap: break-word;
 
     -webkit-box-shadow:0 0 20px #565a5c;
     -moz-box-shadow: 0 0 20px #565a5c;
     box-shadow:0 0 20px #565a5c;
 
+}
+
+.long_descriptionn.second_inner {
+  word-break: break-all;
 }
 
 .edit_buttons {
@@ -606,10 +611,10 @@ a:hover{
 }
 
 .comments_if {
+  display: inline-block;
   position: relative;
   right: 50px;
   background: none;
-  width: 980px;
   text-align: center;
   left: -16.5%;
 }
@@ -621,12 +626,13 @@ a:hover{
   background-color: none;
   text-align: center;
   width: 500px;
-  word-wrap: normal;
+  word-wrap: break-word;
   margin-bottom: 5px;
 
 }
 
 .comments_header {
+  display: inline-block;
   position: relative;
   text-align: center;
   margin-left: 52%;
@@ -634,9 +640,19 @@ a:hover{
 
 comment-form col-sm-11 {
   margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
 }
 
+form#new_comment.new_comment {
+  display: inline-block;
 
+}
+
+div.comment-form.col-sm-11 {
+  display: inline-block;
+  padding-left: 109px;
+}
 
 
 .registration_button {

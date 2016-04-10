@@ -116,7 +116,7 @@
     <br>
       <div class="comment-form col-sm-11">
         <%= form_for [@store, @store.comments.new] do |f| %>
-        <%= f.text_field :content, placeholder: 'Add Comment Here'%>
+        <%= f.text_field :content, placeholder: 'Add a Comment'%>
         <%= f.submit 'Add a Comment', :class => "Add"%>
       </div>
     <br>
