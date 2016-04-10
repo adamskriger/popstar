@@ -10,8 +10,16 @@
 </head>
 <body>
   <div class="main_container">
-  <%= render 'layouts/navbar' %>
+    <% if current_page?(root_path) %>
+        <%= render 'layouts/navbar' %>
+        <% elsif current_page?(new_user_registration_path)  %>
+        <%= render 'layouts/navbar' %>
+        <% elsif current_page?(new_user_session_path)  %>
+        <%= render 'layouts/navbar' %>
 
+        <% else %>
+        <%= render 'layouts/normalnav' %>
+    <% end %>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <%= yield %>

@@ -14,6 +14,11 @@
   font-family: 'Maven Pro', sans-serif;
 }
 
+
+.normalnav {
+  background-color: black !important;
+}
+
 .notice {
   color: white;
   margin: 10px;
@@ -59,7 +64,9 @@ textarea:focus, input:focus {
  }
 
 
-
+nav navbar-nav navbar-right {
+  color: black !important;
+}
 label.string.required {
   list-style-type: none !important;
 }
@@ -158,10 +165,23 @@ padding: 10px;
 .polina_button frontpage {
   float: left;
 }
+.nav_main_opacity {
+  opacity: 0.9 !important;
+  border: none;
+  background: transparent;
+}
+
+ul li a {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: tomato !important;
+
+}
+.logo {
+  background: transparent !important;
+  background-color: transparent !important;
+}
 .navbar-default {
-    background-color: black;
-    border-color: black;
-    opacity: 30%;
     margin-bottom: 0px !important;
 }
 /* title */

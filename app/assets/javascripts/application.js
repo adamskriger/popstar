@@ -29,10 +29,10 @@
 
 $(document).ready(function() {
 
+
+
   var picArray = [$(".pic1"), $(".pic2"),$(".pic3"),$(".pic4")];
   var i=0;
-
-
 
 
   $(".pic1").click(function(){
