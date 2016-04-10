@@ -544,8 +544,7 @@ a:hover{
   font-weight:100;
   background: rgba(0,0,0,0.5);
   color: white;
-  width: 380px;
-  margin-left: 39rem;
+  width: 100%;
 
   font-size: 1.2rem;
   text-align: center;
@@ -555,8 +554,8 @@ a:hover{
 
 .edit_buttons_themselves {
   position: relative;
-  float: left;
   width: 190px;
+  display: inline-block;
 }
 
 .polina_button {
