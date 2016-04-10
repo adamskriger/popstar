@@ -174,7 +174,7 @@ padding: 10px;
 ul li a {
   background: transparent !important;
   background-color: transparent !important;
-  color: tomato !important;
+  color: white !important;
 
 }
 .logo {
@@ -300,7 +300,20 @@ video {
   float: right;
   font-size: 1.2rem;
   list-style: none;
+
 }
+
+.devise_shared_links {
+  text-align: center;
+  width: 100%
+}
+
+.extra_buttons{
+display: inline-block;
+}
+
+
+
 h1 {
   font-size: 3rem;
   text-transform: uppercase;
@@ -662,9 +675,7 @@ comment-form col-sm-11 {
 
 }
 
-.extra_buttons{
-margin-left: 5.3rem;
-}
+
 
 label.boolean.optional.checkbox {
   margin-left: 2rem;
