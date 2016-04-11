@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = @store.comments.find(params[:id])
     @comment.destroy
-    redirect_to store_path
+    redirect_to :back
   end
 
 private
