@@ -290,12 +290,14 @@ video {
   padding-top: 40px;
 }
 
+
+// I am indebited to Dudley Store of //http://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video for //the styling of my transparent divs on the log-in screens and the transparent //buttons throughout the site.
 #polina {
   font-weight:100;
   background: rgba(0,0,0,0.3);
   color: white;
   padding: 2rem;
-  width: 33%;
+  width: 40%;
   margin:2rem;
   float: right;
   font-size: 1.2rem;
@@ -371,6 +373,8 @@ a:hover{
 }
 
 
+// I am indebited to an anonymous source for this css slider. Try as I might
+//I can no longer find the website from which I borrowed.
 
 /* Slider */
 .slider {
